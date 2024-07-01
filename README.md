@@ -69,6 +69,23 @@ dend <- as.dendrogram(hc)
 plot(dend)
 ```
 
+### Disease prediction
+PhenoSS extracts the diseases/phenotype frequencies from the Open Annotations for Rare Diseases (OARD) Database. It takes in HPO terms of a list of patients and outputs the ranks of possible underlying diseases. 
+
+Below is a sample input file:
+
+```
+P1	HP_0012759;HP_0000750;HP_0100022;HP_0000707;
+P2	HP_0001270;HP_0012758;HP_0002066;HP_0011443;
+P3	HP_0012758;HP_0002167;HP_0012638;HP_0000707;
+```
+To run PhenoSS, use the following command:
+
+```
+python phenoSS.py inputFile outputFile
+```
+The ranks will be stored in the output file.
+
 ## Datasets
 #### Human Phenotype Ontology (HPO): 
 https://hpo.jax.org/
