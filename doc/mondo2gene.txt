@@ -1,0 +1,548 @@
+class	class_label	OMIM	Approved Gene Symbol (HGNC)
+MONDO:0013138	BRV2	OMIM:613106	BRV2
+MONDO:0014068	cone-rod dystrophy 17	OMIM:615163	CORD17
+MONDO:0013151	CACD3	OMIM:613144	CACD3
+MONDO:0011384	hypertension, essential, susceptibility to, 1	OMIM:603918	HYT1
+MONDO:0010668	skeletal dysplasia-intellectual disability syndrome	OMIM:309620	MRSD
+MONDO:0010568	Aicardi syndrome	OMIM:304050	AIC
+MONDO:0011589	MCOPCB2	OMIM:605738	MCOPCB2
+MONDO:0013860	idiopathic membranous glomerulonephritis	OMIM:614692	MBNP
+MONDO:0011845	migraine with or without aura, susceptibility to, 3	OMIM:607498	MGR3
+MONDO:0011621	acropectoral syndrome	OMIM:605967	ACRPS
+MONDO:0010418	hereditary spastic paraplegia 34	OMIM:300750	SPG34
+MONDO:0013813	dystonia 21	OMIM:614588	DYT21
+MONDO:0013597	platelet-type bleeding disorder 14	OMIM:614158	BDPLT14
+MONDO:0012441	migraine with or without aura, susceptibility to, 11	OMIM:610209	MGR11
+MONDO:0011578	familial papillary thyroid carcinoma with renal papillary neoplasia	OMIM:605642	PTCPRN
+MONDO:0013973	ECTD5	OMIM:614927	ECTD5
+MONDO:0012974	autosomal dominant nonsyndromic deafness 59	OMIM:612642	DFNA59
+MONDO:0011557	radiation sensitivity/chromosome instability syndrome, autosomal dominant	OMIM:605463	RSCIS
+MONDO:0012751	AAA3	OMIM:611891	AAA3
+MONDO:0013365	autosomal recessive nonsyndromic deafness 83	OMIM:613685	DFNB83
+MONDO:0013684	VUR6	OMIM:614319	VUR6
+MONDO:0012343	AAA2	OMIM:609782	AAA2
+MONDO:0012630	Alzheimer disease 13	OMIM:611152	AD13
+MONDO:0012492	restless legs syndrome, susceptibility to, 3	OMIM:610438	RLS3
+MONDO:0011015	cataract 24	OMIM:601202	CTAA2
+MONDO:0013108	leukemia, acute lymphocytic, susceptibility to, 1	OMIM:613065	ALL1
+MONDO:0012066	ATFB1	OMIM:608583	ATFB1
+MONDO:0012706	familial temporal lobe epilepsy 4	OMIM:611631	ETL4
+MONDO:0011768	myasthenia gravis with thymus hyperplasia	OMIM:607085	MYAS1
+MONDO:0010548	spinocerebellar ataxia, X-linked 2	OMIM:302600	SCAX2
+MONDO:0010462	syndromic X-linked intellectual disability Chudley-Schwartz type	OMIM:300861	MRXSCS
+MONDO:0010347	MRX84	OMIM:300505	MRX84
+MONDO:0012877	major affective disorder 8	OMIM:612357	MAFD8
+MONDO:0012884	SLEB13	OMIM:612378	SLEB13
+MONDO:0013844	stuttering, familial persistent, 4	OMIM:614668	STUT4
+MONDO:0013101	BCC2	OMIM:613058	BCC2
+MONDO:0007184	AGA1	OMIM:109200	AFA1
+MONDO:0013152	SLEB14	OMIM:613145	SLEB14
+MONDO:0007933	vitelliform macular dystrophy 1	OMIM:153840	VMD1
+MONDO:0011847	migraine without aura	OMIM:607501	MGR4
+MONDO:0012087	primary ciliary dyskinesia 4	OMIM:608646	CILD4
+MONDO:0012082	ASPG1	OMIM:608638	ASPG1
+MONDO:0009539	lymphoblastic leukemia, acute, with lymphomatous features	OMIM:247640	LALL
+MONDO:0008164	OTSC1	OMIM:166800	OTSC1
+MONDO:0012950	ANIB10	OMIM:612587	ANIB10
+MONDO:0010243	X-linked immunoneurologic disorder	OMIM:300076	INDX
+MONDO:0007295	rolandic epilepsy	OMIM:117100	ECT
+MONDO:0012899	AGA3	OMIM:612421	AGA3
+MONDO:0012053	ANIB2	OMIM:608542	ANIB2
+MONDO:0011440	hypertension, essential, susceptibility to, 2	OMIM:604329	HYT2
+MONDO:0009349	holoprosencephaly 1	OMIM:236100	HPE1
+MONDO:0011943	SLEN2	OMIM:607966	SLEN2
+MONDO:0007280	cataract 8 multiple types	OMIM:115665	CCV
+MONDO:0010061	autosomal recessive cerebellar ataxia-blindness-deafness syndrome	OMIM:271250	SCAR3
+MONDO:0007058	acropectorovertebral dysplasia	OMIM:102510	ACRPV
+MONDO:0009649	MYMY1	OMIM:252350	MYMY1
+MONDO:0010529	X-linked spinocerebellar ataxia type 3	OMIM:301790	SCAX3
+MONDO:0008072	IGAN1	OMIM:161950	IGAN1
+MONDO:0011392	autosomal recessive nonsyndromic deafness 20	OMIM:604060	DFNB20
+MONDO:0012194	ANIB3	OMIM:609122	ANIB3
+MONDO:0011220	PARK3	OMIM:602404	PARK3
+MONDO:0007111	aneurysm, intracranial berry type 1	OMIM:105800	ANIB1
+MONDO:0008000	migraine with or without aura, susceptibility to, 1	OMIM:157300	MGR1
+MONDO:0012766	hereditary spastic paraplegia 37	OMIM:611945	SPG37
+MONDO:0013260	EOE2	OMIM:613412	EOE2
+MONDO:0013022	restless legs syndrome, susceptibility to, 7	OMIM:612853	RLS7
+MONDO:0012697	OTSC7	OMIM:611572	OTSC7
+MONDO:0007130	congenital total pulmonary venous return anomaly	OMIM:106700	TAPVR1
+MONDO:0011844	myoclonic dystonia 15	OMIM:607488	DYT15
+MONDO:0012968	Usher syndrome type 1H	OMIM:612632	USH1H
+MONDO:0008412	intestinal schistosomiasis	OMIM:181460	SM1
+MONDO:0013592	nonsyndromic congenital nail disorder 9	OMIM:614149	NDNC9
+MONDO:0012447	synpolydactyly type 3	OMIM:610234	SPD3
+MONDO:0012278	PSNP2	OMIM:609454	PSNP2
+MONDO:0010868	rippling muscle disease 1	OMIM:600332	RMD1
+MONDO:0013708	MRT25	OMIM:614346	MRT25
+MONDO:0012655	EJM4	OMIM:611364	EJM4
+MONDO:0012100	major depressive disorder 2	OMIM:608691	MDD2
+MONDO:0007864	angioosteohypertrophic syndrome	OMIM:149000	KTWS
+MONDO:0013694	MRT31	OMIM:614329	MRT31
+MONDO:0011807	SLEH1	OMIM:607279	SLEH1
+MONDO:0012708	PLSA1	OMIM:611637	PLSA1
+MONDO:0012181	hereditary spastic paraplegia 27	OMIM:609041	SPG27
+MONDO:0013207	FECD7	OMIM:613271	FECD7
+MONDO:0012678	ATFB5	OMIM:611494	ATFB5
+MONDO:0013637	primary biliary cholangitis 5	OMIM:614221	PBC5
+MONDO:0010658	syndromic X-linked intellectual disability 12	OMIM:309545	MRXS12
+MONDO:0012705	familial temporal lobe epilepsy 3	OMIM:611630	FMTLE
+MONDO:0011673	autosomal dominant nonsyndromic deafness 30	OMIM:606451	DFNA30
+MONDO:0012375	autosomal recessive nonsyndromic deafness 47	OMIM:609946	DFNB47
+MONDO:0024559	AAT1	OMIM:607086	AAT1
+MONDO:0011648	radiation-induced meningioma	OMIM:606190	MNRI
+MONDO:0007137	isolated congenital anosmia	OMIM:107200	ANIC
+MONDO:0010648	major affective disorder 2	OMIM:309200	MAFD2
+MONDO:0009553	Plasmodium falciparum blood infection level	OMIM:248310	PFBI
+MONDO:0011991	autosomal recessive nonsyndromic deafness 38	OMIM:608219	DFNB38
+MONDO:0009764	ocular motor apraxia, Cogan type	OMIM:257550	COMA
+MONDO:0007520	ectrodactyly, ectodermal dysplasia, and cleft lip-palate syndrome 1	OMIM:129900	EEC1
+MONDO:0011862	hereditary spastic paraplegia 24	OMIM:607584	SPG24
+MONDO:0012631	Alzheimer disease 14	OMIM:611154	AD14
+MONDO:0012765	LMPH1B	OMIM:611944	LMPH1B
+MONDO:0011195	Usher syndrome type 1E	OMIM:602097	USH1E
+MONDO:0010550	Charcot-Marie-Tooth disease X-linked recessive 2	OMIM:302801	CMTX2
+MONDO:0010453	MRX92	OMIM:300851	MRX92
+MONDO:0012754	NNO3	OMIM:611897	NNO3
+MONDO:0014127	oculocutaneous albinism type 5	OMIM:615312	OCA5
+MONDO:0010736	split hand-foot malformation 2	OMIM:313350	SHFM2
+MONDO:0012842	CMM7	OMIM:612263	CMM7
+MONDO:0012836	SLEB12	OMIM:612254	SLEB12
+MONDO:0013086	NBLST6	OMIM:613017	NBLST6
+MONDO:0008340	congenital ptosis (disease)	OMIM:178300	PTOS1
+MONDO:0007108	anal canal carcinoma	OMIM:105580	ANC
+MONDO:0008071	autosomal dominant progressive nephropathy with hypertension	OMIM:161900	RFH1
+MONDO:0013703	MRT33	OMIM:614341	MRT33
+MONDO:0010374	retinitis pigmentosa 34	OMIM:300605	RP34
+MONDO:0010290	MNG2	OMIM:300273	MNG2
+MONDO:0012158	KTCN2	OMIM:608932	KTCN2
+MONDO:0011757	brachydactyly type A1B	OMIM:607004	BDA1B
+MONDO:0008683	Wilms tumor 3	OMIM:194090	WT3
+MONDO:0013649	hypotrichosis 9	OMIM:614237	HYPT9
+MONDO:0012617	MRT9	OMIM:611095	MRT9
+MONDO:0012210	migraine with aura, susceptibility to, 7	OMIM:609179	MGR7
+MONDO:0012487	alopecia-intellectual disability syndrome 2	OMIM:610422	APMR2
+MONDO:0012537	SHFLD2	OMIM:610685	SHFLD2
+MONDO:0010722	X-linked retinal dysplasia	OMIM:312550	PRD
+MONDO:0011586	OTSC2	OMIM:605727	OTSC2
+MONDO:0011625	autosomal dominant nonsyndromic deafness 18	OMIM:606012	DFNA18
+MONDO:0007401	craniosynostosis-Dandy-Walker malformation-hydrocephalus syndrome	OMIM:123155	HDCPH1
+MONDO:0007332	SHFLD1	OMIM:119100	SHFL1
+MONDO:0013257	LPRS6	OMIM:613407	LPRS6
+MONDO:0010410	AGA2	OMIM:300710	AGA2
+MONDO:0013132	hereditary spastic paraplegia 36	OMIM:613096	SPG36
+MONDO:0012661	susceptibility to visceral leishmaniasis, 3	OMIM:611382	KAZA3
+MONDO:0011188	arrhythmogenic right ventricular dysplasia 3	OMIM:602086	ARVD3
+MONDO:0011961	hereditary sensory and autonomic neuropathy type 1B	OMIM:608088	HSN1B
+MONDO:0012086	autosomal dominant nonsyndromic deafness 31	OMIM:608645	DFNA31
+MONDO:0012377	ASPG4	OMIM:609954	ASPG4
+MONDO:0008187	panic disorder 1	OMIM:167870	PAND1
+MONDO:0013084	NBLST4	OMIM:613015	NBLST4
+MONDO:0011967	heterotopia, periventricular, associated with chromosome 5P anomalies	OMIM:608098	PVNH3
+MONDO:0012844	primary ciliary dyskinesia 8	OMIM:612274	CILD8
+MONDO:0013496	IGAN2	OMIM:613944	IGAN2
+MONDO:0010841	Waardenburg syndrome type 2B	OMIM:600193	WS2B
+MONDO:0012603	episodic kinesigenic dyskinesia 2	OMIM:611031	EKD2
+MONDO:0013068	age-related hearing impairment 2	OMIM:612976	ARHI2
+MONDO:0010846	EXT3	OMIM:600209	EXT3
+MONDO:0011425	dilated cardiomyopathy 1H	OMIM:604288	CMD1H
+MONDO:0013088	FL1	OMIM:613024	FL1
+MONDO:0012443	ANIB4	OMIM:610213	ANIB4
+MONDO:0012321	Alzheimer disease 10	OMIM:609636	AD10
+MONDO:0008205	patella aplasia/hypoplasia	OMIM:168860	PTLAH
+MONDO:0010253	migraine, familial typical, susceptibility to, 2	OMIM:300125	MGR2
+MONDO:0011259	retinitis pigmentosa 22	OMIM:602594	RP22
+MONDO:0013833	KTCN7	OMIM:614629	KTCN7
+MONDO:0011360	autosomal recessive nonsyndromic deafness 14	OMIM:603678	DFNB14
+MONDO:0011770	aortic aneurysm, familial thoracic 2	OMIM:607087	AAT2
+MONDO:0012760	EIG5	OMIM:611934	EIG5
+MONDO:0011709	split hand-foot malformation 5	OMIM:606708	SHFM5
+MONDO:0010270	syndromic X-linked intellectual disability 7	OMIM:300218	MRXS7
+MONDO:0012872	THPH9	OMIM:612348	THPH9
+MONDO:0012113	EIG3	OMIM:608762	EIG3
+MONDO:0000912	autosomal recessive nonsyndromic deafness 5	OMIM:600792	DFNB5
+MONDO:0012000	specific phobia	OMIM:608251	PHOBS
+MONDO:0010927	OFC3	OMIM:600757	OFC3
+MONDO:0013841	stuttering, familial persistent, 3	OMIM:614655	STUT3
+MONDO:0012188	neuronal ceroid lipofuscinosis 9	OMIM:609055	CLN9
+MONDO:0013448	GEFSP8	OMIM:613828	GEFSP8
+MONDO:0010307	MRX73	OMIM:300355	MRX73
+MONDO:0011710	specific language impairment 1	OMIM:606711	SLI1
+MONDO:0011999	OTSC3	OMIM:608244	OTSC3
+MONDO:0008656	benign paroxysmal positional nystagmus	OMIM:193007	BPPV
+MONDO:0011886	torsion dystonia 13	OMIM:607671	DYT13
+MONDO:0011954	CMM4	OMIM:608035	CMM4
+MONDO:0012122	MYMY3	OMIM:608796	MYMY3
+MONDO:0010761	retinitis pigmentosa Y-linked	OMIM:400004	RPY
+MONDO:0011164	malignant hyperthermia, susceptibility to, 6	OMIM:601888	MHS6
+MONDO:0011635	MNG3	OMIM:606082	MNG3
+MONDO:0011813	polydactyly, postaxial, type A3	OMIM:607324	PAPA3
+MONDO:0012055	Larsen-like osseous dysplasia-short stature syndrome	OMIM:608545	LRSL
+MONDO:0008653	VUR1	OMIM:193000	VUR
+MONDO:0011592	EVR3	OMIM:605750	EVR3
+MONDO:0007787	Ambras type hypertrichosis universalis congenita	OMIM:145701	HTC1
+MONDO:0009893	polydactyly, postaxial, type A5	OMIM:263450	PAPA5
+MONDO:0012232	stuttering, familial persistent, 2	OMIM:609261	STUT2
+MONDO:0010918	EIG	OMIM:600669	EGI
+MONDO:0012618	MRT10	OMIM:611096	MRT10
+MONDO:0012491	WM2	OMIM:610430	WM2
+MONDO:0012050	major depressive disorder 1	OMIM:608520	MDD1
+MONDO:0011653	thyroid cancer, nonmedullary, 3	OMIM:606240	NMTC3
+MONDO:0013029	cerebellar ataxia type 9	OMIM:612876	SCA9
+MONDO:0012023	autosomal dominant nonsyndromic deafness 49	OMIM:608372	DFNA49
+MONDO:0013020	narcolepsy 5, susceptibility to	OMIM:612851	NRCLP5
+MONDO:0007719	diaphragmatic hernia, congenital 1	OMIM:142340	DIH1
+MONDO:0011799	autosomal recessive nonsyndromic deafness 33	OMIM:607239	DFNB33
+MONDO:0010390	ocular albinism with late-onset sensorineural deafness	OMIM:300650	OASD
+MONDO:0013079	primary biliary cholangitis 2	OMIM:613007	PBC2
+MONDO:0010764	DFNY1	OMIM:400043	DFNY1
+MONDO:0012346	GEFSP4	OMIM:609800	GEFSP4
+MONDO:0011286	autosomal recessive nonsyndromic deafness 13	OMIM:603098	DFNB13
+MONDO:0011491	EIG7	OMIM:604827	EJM2
+MONDO:0011602	autosomal recessive nonsyndromic deafness 27	OMIM:605818	DFNB27
+MONDO:0008588	hereditary geniospasm	OMIM:190100	GSM1
+MONDO:0011460	arrhythmogenic right ventricular dysplasia 6	OMIM:604401	ARVD6
+MONDO:0014067	short ulna-dysmorphism-hypotonia-intellectual disability syndrome	OMIM:615162	MRT35
+MONDO:0024521	aortic aneurysm, familial abdominal, 1	OMIM:100070	AAA1
+MONDO:0008040	transient myeloproliferative syndrome (disease)	OMIM:159595	TAM
+MONDO:0010280	ptosis, hereditary congenital 2	OMIM:300245	PTOS2
+MONDO:0012351	zygodactyly type 1	OMIM:609815	ZD1
+MONDO:0013780	retinitis pigmentosa 63	OMIM:614494	RP63
+MONDO:0011312	thyroid carcinoma, nonmedullary, with or without cell oxyphilia	OMIM:603386	TCO
+MONDO:0013832	KTCN8	OMIM:614628	KTCN8
+MONDO:0013629	MRT16	OMIM:614208	MRT16
+MONDO:0012440	migraine with or without aura, susceptibility to, 10	OMIM:610208	MGR10
+MONDO:0010404	X-linked non progressive cerebellar ataxia	OMIM:300703	SCAX5
+MONDO:0011753	EIG2	OMIM:606972	EIG2
+MONDO:0012179	narcolepsy 3	OMIM:609039	NRCLP3
+MONDO:0011649	AVSD 1	OMIM:606215	AVSD1
+MONDO:0011944	SLEN3	OMIM:607967	SLEN3
+MONDO:0012151	attention deficit-hyperactivity disorder, susceptibility to, 3	OMIM:608905	ADHD3
+MONDO:0011815	hypertension, essential, susceptibility to, 3	OMIM:607329	HYT3
+MONDO:0008067	nasopharyngeal carcinoma, susceptibility to, 2	OMIM:161550	NPCA2
+MONDO:0011200	torsion dystonia 7	OMIM:602124	DYT7
+MONDO:0012643	hereditary spastic paraplegia 32	OMIM:611252	SPG32
+MONDO:0012425	FECD2	OMIM:610158	FECD2
+MONDO:0013928	dystonia 23	OMIM:614860	DYT23
+MONDO:0010991	laterality defects, autosomal dominant	OMIM:601086	LATD
+MONDO:0012267	holoprosencephaly 8	OMIM:609408	HPE8
+MONDO:0011561	Alzheimer disease 6	OMIM:605526	AD6
+MONDO:0012459	hypertension, essential, susceptibility to, 6	OMIM:610262	HYT6
+MONDO:0012863	attention deficit-hyperactivity disorder, susceptibility to, 6	OMIM:612312	ADHD6
+MONDO:0013852	hypertrophic cardiomyopathy 21	OMIM:614676	CMH21
+MONDO:0012380	autosomal dominant nonsyndromic deafness 53	OMIM:609965	DFNA53
+MONDO:0008966	Aagenaes syndrome	OMIM:214900	LCS1
+MONDO:0013738	autosomal recessive nonsyndromic deafness 96	OMIM:614414	DFNB96
+MONDO:0007279	cataract 7	OMIM:115660	CCA1
+MONDO:0012947	intellectual disability, autosomal dominant 4	OMIM:612581	MRD4
+MONDO:0010287	hereditary spastic paraplegia 16	OMIM:300266	SPG16
+MONDO:0009331	isolated hemihyperplasia	OMIM:235000	IH
+MONDO:0008291	porokeratosis plantaris palmaris et disseminata	OMIM:175850	POROK2
+MONDO:0011771	distal spinal muscular atrophy type 3	OMIM:607088	SMAR
+MONDO:0009197	transient erythroblastopenia of childhood	OMIM:227050	TEC
+MONDO:0009103	diaphragmatic hernia 2	OMIM:222400	DIH2
+MONDO:0011992	hereditary spastic paraplegia 25	OMIM:608220	SPG25
+MONDO:0010144	tibial hemimelia	OMIM:275220	THMA
+MONDO:0011777	Alzheimer disease 8	OMIM:607116	AD8
+MONDO:0010633	iris hypoplasia with glaucoma	OMIM:308500	IHG1
+MONDO:0008433	small cell lung carcinoma	OMIM:182280	SCLC1
+MONDO:0007372	cornea plana 1, autosomal dominant	OMIM:121400	CNA1
+MONDO:0013239	hereditary spastic paraplegia 41	OMIM:613364	SPG41
+MONDO:0012069	KTCN3	OMIM:608586	KTCN3
+MONDO:0011560	SLEB3	OMIM:605480	SLEB3
+MONDO:0014555	peeling skin syndrome type A	OMIM:616265	PSS3
+MONDO:0012331	migraine with aura, susceptibility to, 9	OMIM:609670	MGR9
+MONDO:0013682	VUR4	OMIM:614317	VUR4
+MONDO:0010742	pentalogy of Cantrell	OMIM:313850	THAS
+MONDO:0012384	panic disorder 3	OMIM:609985	PAND3
+MONDO:0013205	FECD5	OMIM:613269	FECD5
+MONDO:0013492	APMR3	OMIM:613930	APMR3
+MONDO:0012260	cataract 35	OMIM:609376	CTRCT35
+MONDO:0012030	autosomal dominant nonsyndromic deafness 43	OMIM:608394	DFNA43
+MONDO:0010836	NNO1	OMIM:600165	NNO1
+MONDO:0013683	VUR5	OMIM:614318	VUR5
+MONDO:0011189	arrhythmogenic right ventricular dysplasia 4	OMIM:602087	ARVD4
+MONDO:0007172	atrial heart septal defect 1	OMIM:108800	ASD1
+MONDO:0013709	MRT28	OMIM:614347	MRT28
+MONDO:0011595	nonsyndromic congenital nail disorder 7	OMIM:605779	NDIC
+MONDO:0013636	primary biliary cholangitis 4	OMIM:614220	PBC4
+MONDO:0012265	PEE3	OMIM:609403	PEE3
+MONDO:0011487	Huntington disease-like 3	OMIM:604802	HDL3
+MONDO:0011950	infantile-onset autosomal recessive nonprogressive cerebellar ataxia	OMIM:608029	CLA3
+MONDO:0012036	SLEB4	OMIM:608437	SLEB4
+MONDO:0012214	GCCD3	OMIM:609197	GCCD3
+MONDO:0014301	DDD3	OMIM:615674	DDD3
+MONDO:0011097	Axenfeld-Rieger syndrome type 2	OMIM:601499	RIEG2
+MONDO:0013241	spinocerebellar ataxia type 30	OMIM:613371	SCA30
+MONDO:0011187	polydactyly, postaxial, type A2	OMIM:602085	PAPA2
+MONDO:0010460	syndromic X-linked intellectual disability 17	OMIM:300858	MRXS17
+MONDO:0012813	retinitis pigmentosa 29	OMIM:612165	RP29
+MONDO:0011808	cataract 27	OMIM:607304	CTRCT27
+MONDO:0009869	isolated Pierre-Robin syndrome	OMIM:261800	PRBNS
+MONDO:0014264	OTSC10	OMIM:615589	OTSC10
+MONDO:0012587	hypertension, essential, susceptibility to, 7	OMIM:610948	HYT7
+MONDO:0009974	familial hemophagocytic lymphohistiocytosis type 1	OMIM:267700	HPLH1
+MONDO:0007250	camptodactyly of fingers	OMIM:114200	CAMPD1
+MONDO:0012867	hereditary spastic paraplegia 38	OMIM:612335	SPG38
+MONDO:0012685	major affective disorder 5	OMIM:611535	MAFD5
+MONDO:0012800	trichoepithelioma, multiple familial, 2	OMIM:612099	MFT2
+MONDO:0013706	MRT23	OMIM:614344	MRT23
+MONDO:0011775	nasopharyngeal carcinoma, susceptibility to, 1	OMIM:607107	NPCA1
+MONDO:0013300	commissural facial cleft	OMIM:613545	MACST
+MONDO:0024549	MCOPCB1	OMIM:300345	MCOPCB1
+MONDO:0012406	HRPT3	OMIM:610071	HRPT3
+MONDO:0012903	autosomal recessive nonsyndromic deafness 45	OMIM:612433	DFNB45
+MONDO:0024529	MVP1	OMIM:157700	MMVP1
+MONDO:0011175	FRDA2	OMIM:601992	FRDA2
+MONDO:0012965	BFIS4	OMIM:612627	BFIS4
+MONDO:0013830	KTCN5	OMIM:614622	KTCN5
+MONDO:0012105	granulomatosis with polyangiitis	OMIM:608710	WG
+MONDO:0013297	autosomal dominant limb-girdle muscular dystrophy type 1H	OMIM:613530	LGMD1H
+MONDO:0011279	autosomal recessive nonsyndromic deafness 17	OMIM:603010	DFNB17
+MONDO:0013221	Miyoshi muscular dystrophy 2	OMIM:613318	MMD2
+MONDO:0012051	periodontitis, aggressive, 2	OMIM:608526	PDON2
+MONDO:0013639	narcolepsy 6, susceptibility to	OMIM:614223	NRCLP6
+MONDO:0010391	angioma serpiginosum, X-linked	OMIM:300652	AGSPX
+MONDO:0011194	Alzheimer disease 5	OMIM:602096	AD5
+MONDO:0010236	MRX14	OMIM:300062	MRX14
+MONDO:0012404	SLEB8	OMIM:610066	SLEB8
+MONDO:0012671	ETM3	OMIM:611456	ETM3
+MONDO:0011697	Waardenburg syndrome type 2C	OMIM:606662	WS2C
+MONDO:0010245	X-linked cone-rod dystrophy 2	OMIM:300085	COD2
+MONDO:0010348	dyslexia, susceptibility to, 9	OMIM:300509	DYX9
+MONDO:0007935	cystoid macular edema	OMIM:153880	CYMD
+MONDO:0012623	MRT4	OMIM:611107	MRT4
+MONDO:0007995	MCOPCT1	OMIM:156850	MCOPCT1
+MONDO:0010360	PARK12	OMIM:300557	PARK12
+MONDO:0012663	Plasmodium falciparum fever episodes quantitative trait locus 1	OMIM:611384	PFFE1
+MONDO:0013010	autosomal recessive nonsyndromic deafness 71	OMIM:612789	DFNB71
+MONDO:0007443	congenital unilateral hypoplasia of depressor anguli oris	OMIM:125520	ACF
+MONDO:0010826	childhood absence epilepsy	OMIM:600131	ECA1
+MONDO:0024569	optic atrophy 8	OMIM:616648	OPA8
+MONDO:0012376	autosomal recessive nonsyndromic deafness 55	OMIM:609952	DFNB55
+MONDO:0008474	spondyloepiphyseal dysplasia tarda, autosomal dominant	OMIM:184100	SPDT
+MONDO:0009786	optic atrophy 6	OMIM:258500	OPA6
+MONDO:0010446	X-linked cone dysfunction syndrome with myopia	OMIM:300843	BED
+MONDO:0013104	BCC4	OMIM:613061	BCC4
+MONDO:0012135	restless legs syndrome, susceptibility to, 2	OMIM:608831	RLS2
+MONDO:0012797	OTSC8	OMIM:612096	OTSC8
+MONDO:0012195	arthrogryposis-severe scoliosis syndrome	OMIM:609128	DA4
+MONDO:0010365	CFTDX	OMIM:300580	CFTDX
+MONDO:0011965	familial temporal lobe epilepsy 2	OMIM:608096	ETL2
+MONDO:0013716	AAA4	OMIM:614375	AAA4
+MONDO:0021012	susceptibility to visceral leishmaniasis, 1	OMIM:608207	KAZA1
+MONDO:0011657	autosomal dominant nonsyndromic deafness 24	OMIM:606282	DFNA24
+MONDO:0011952	amyotrophic lateral sclerosis type 7	OMIM:608031	ALS7
+MONDO:0007440	major affective disorder 1	OMIM:125480	MAFD1
+MONDO:0024265	Duane syndrome type 1	OMIM:126800	DURS1
+MONDO:0012344	Alzheimer disease 11	OMIM:609790	AD11
+MONDO:0011785	hereditary spastic paraplegia 19	OMIM:607152	SPG19
+MONDO:0012493	restless legs syndrome, susceptibility to, 4	OMIM:610439	RLS4
+MONDO:0007278	cataract 32 multiple types	OMIM:115650	CTAA1
+MONDO:0011851	migraine with or without aura, susceptibility to, 6	OMIM:607516	MGR6
+MONDO:0012121	OTSC5	OMIM:608787	OTSC5
+MONDO:0011802	hypercalciuria, absorptive, 1	OMIM:607258	HCA1
+MONDO:0012152	attention deficit-hyperactivity disorder, susceptibility to, 4	OMIM:608906	ADHD4
+MONDO:0012642	major affective disorder 4	OMIM:611247	MAFD4
+MONDO:0010522	X-linked amelogenesis imperfecta hypoplastic/hypomaturation 2	OMIM:301201	AIH3
+MONDO:0011924	panic disorder 2	OMIM:607853	PAND2
+MONDO:0012327	autosomal recessive nonsyndromic deafness 46	OMIM:609647	DFNB46
+MONDO:0011834	spinocerebellar ataxia type 18	OMIM:607458	SCA18
+MONDO:0010917	CCAL1	OMIM:600668	CCAL1
+MONDO:0013614	hypertelorism-preauricular sinus-punctual pits-deafness syndrome	OMIM:614187	HPPD
+MONDO:0012451	EOE1	OMIM:610247	EOE1
+MONDO:0013109	leukemia, acute lymphocytic, susceptibility to, 2	OMIM:613067	ALL2
+MONDO:0007712	oculoauriculovertebral spectrum with radial defects	OMIM:141400	GHS
+MONDO:0012285	LVNC2	OMIM:609470	LVNC2
+MONDO:0007476	familial Dupuytren contracture	OMIM:126900	DUPC1
+MONDO:0010468	ANIB5	OMIM:300870	ANIB5
+MONDO:0013974	ECTD6	OMIM:614928	ECTD6
+MONDO:0011901	Charcot-Marie-Tooth disease axonal type 2H	OMIM:607731	CMT2H
+MONDO:0011297	autosomal dominant nocturnal frontal lobe epilepsy 2	OMIM:603204	ENFL2
+MONDO:0012576	PSNP3	OMIM:610898	PSNP3
+MONDO:0013085	NBLST5	OMIM:613016	NBLST5
+MONDO:0007486	hereditary benign intraepithelial dyskeratosis	OMIM:127600	DKBI
+MONDO:0012598	GINGF4	OMIM:611010	GINGF4
+MONDO:0008831	asphyxiating thoracic dystrophy 1	OMIM:208500	ATD
+MONDO:0012361	SLEB5	OMIM:609903	SLEB5
+MONDO:0012583	STHAG5	OMIM:610926	STHAG5
+MONDO:0012917	specific language impairment 4	OMIM:612514	SLI4
+MONDO:0012090	autosomal dominant nonsyndromic deafness 47	OMIM:608652	DFNA47
+MONDO:0010903	craniosynostosis, Adelaide type	OMIM:600593	CRSA
+MONDO:0012862	attention deficit-hyperactivity disorder, susceptibility to, 5	OMIM:612311	ADHD5
+MONDO:0012660	susceptibility to visceral leishmaniasis, 2	OMIM:611381	KAZA2
+MONDO:0010748	torticollis-keloids-cryptorchidism-renal dysplasia syndrome	OMIM:314300	TKCR
+MONDO:0007123	ankyloblepharon filiforme adnatum-cleft palate syndrome	OMIM:106250	AFA
+MONDO:0012452	autosomal recessive nonsyndromic deafness 65	OMIM:610248	DFNB65
+MONDO:0011470	hyperlipidemia, combined, 2	OMIM:604499	HYPLIP2
+MONDO:0011556	BCC1	OMIM:605462	BCC1
+MONDO:0013654	ANIB11	OMIM:614252	ANIB11
+MONDO:0011682	episodic ataxia type 3	OMIM:606554	EA3
+MONDO:0012149	attention deficit-hyperactivity disorder, susceptibility to, 1	OMIM:608903	ADHD1
+MONDO:0007701	progressive familial heart block type II	OMIM:140400	PFHB2
+MONDO:0012696	OTSC4	OMIM:611571	OTSC4
+MONDO:0011647	Alzheimer disease 7	OMIM:606187	AD7
+MONDO:0012910	age-related hearing impairment 1	OMIM:612448	ARHI1
+MONDO:0007940	malignant hyperthermia, susceptibility to, 3	OMIM:154276	MHS3
+MONDO:0010951	dilated cardiomyopathy 1B	OMIM:600884	CMD1B
+MONDO:0012686	major affective disorder 6	OMIM:611536	MAFD6
+MONDO:0012811	ANIB8	OMIM:612162	ANIB8
+MONDO:0012002	autosomal recessive nonsyndromic deafness 40	OMIM:608264	DFNB40
+MONDO:0012641	restless legs syndrome, susceptibility to, 5	OMIM:611242	RLS5
+MONDO:0007772	pseudohypoaldosteronism type 2A	OMIM:145260	PHA2A
+MONDO:0010353	deafness-intellectual disability, Martin-Probst type syndrome	OMIM:300519	MRXSMP
+MONDO:0013697	MRT29	OMIM:614333	MRT29
+MONDO:0013707	MRT24	OMIM:614345	MRT24
+MONDO:0011900	POROK4	OMIM:607728	POROK4
+MONDO:0014476	episodic ataxia type 8	OMIM:616055	EA8
+MONDO:0013831	KTCN6	OMIM:614623	KTCN6
+MONDO:0007756	hyperkeratosis lenticularis perstans (disease)	OMIM:144150	HLP
+MONDO:0013650	hypotrichosis 10	OMIM:614238	HYP10
+MONDO:0012882	major affective disorder 9	OMIM:612372	MAFD9
+MONDO:0013250	autosomal recessive nonsyndromic deafness 85	OMIM:613392	DFNB85
+MONDO:0012846	GEFSP6	OMIM:612279	GEFSP6
+MONDO:0013744	cataract 37	OMIM:614422	CTRCT37
+MONDO:0011265	STHAG2	OMIM:602639	HYD2
+MONDO:0012306	cardiomyopathy, familial restrictive, 2	OMIM:609578	RCM2
+MONDO:0010259	retinitis pigmentosa 24	OMIM:300155	RP24
+MONDO:0011659	HTX3	OMIM:606325	HTX3
+MONDO:0012079	ASPG2	OMIM:608631	ASPG2
+MONDO:0010579	X-linked corneal dermoid	OMIM:304730	CND
+MONDO:0010905	cone-rod dystrophy 1	OMIM:600624	CORD1
+MONDO:0013024	chronic thromboembolic pulmonary hypertension	OMIM:612862	CTEPH1
+MONDO:0013704	MRT30	OMIM:614342	MRT30
+MONDO:0000910	retinitis pigmentosa 6	OMIM:312612	RP6
+MONDO:0024527	glomerulopathy with fibronectin deposits 1	OMIM:137950	GFND1
+MONDO:0012949	ANIB9	OMIM:612586	ANIB9
+MONDO:0012810	ANIB7	OMIM:612161	ANIB7
+MONDO:0012364	dilated cardiomyopathy 1Q	OMIM:609915	CMD1Q
+MONDO:0011636	Diamond-Blackfan anemia 2	OMIM:606129	DBA2
+MONDO:0012236	KTCN4	OMIM:609271	KTCN4
+MONDO:0013313	ectodermal dysplasia-cutaneous syndactyly syndrome	OMIM:613576	EDSS2
+MONDO:0007969	Melkersson-Rosenthal syndrome	OMIM:155900	MROS
+MONDO:0014388	familial median cleft of the upper and lower lips	OMIM:615892	OFC14
+MONDO:0012889	SS3	OMIM:612388	SS3
+MONDO:0010877	Charcot-Marie-Tooth disease type 5	OMIM:600361	HMSN5
+MONDO:0010454	MRX88	OMIM:300852	MRX88
+MONDO:0012599	HYT8	OMIM:611014	HYT8
+MONDO:0012403	SLEB7	OMIM:610065	SLEB7
+MONDO:0012551	AA2	OMIM:610753	AA2
+MONDO:0010433	SLEB15	OMIM:300809	SLEB15
+MONDO:0012874	POROK6	OMIM:612353	POROK6
+MONDO:0008006	Mobius syndrome	OMIM:157900	MBS1
+MONDO:0010534	X-linked spinocerebellar ataxia type 4	OMIM:301840	SCAX4
+MONDO:0012857	POROK5	OMIM:612293	POROK5
+MONDO:0012378	GINGF3	OMIM:609955	GINGF3
+MONDO:0012059	polydactyly, postaxial, type A4	OMIM:608562	PAPA4
+MONDO:0012629	paroxysmal nonkinesigenic dyskinesia 2	OMIM:611147	PNKD2
+MONDO:0013665	EJM9	OMIM:614280	EJM9
+MONDO:0010540	bullous dystrophy, macular type	OMIM:302000	EBM
+MONDO:0010426	X-linked endothelial corneal dystrophy	OMIM:300779	XECD
+MONDO:0012338	EIG4	OMIM:609750	EIG4
+MONDO:0042499	benign familial neonatal-infantile seizures 1	OMIM:601764	BFIS1
+MONDO:0012303	migraine with or without aura, susceptibility to, 8	OMIM:609570	MGR8
+MONDO:0010273	lymphoma, Hodgkin, X-linked pseudoautosomal	OMIM:300221	HDPA
+MONDO:0010274	TGCT1	OMIM:300228	TGCT1
+MONDO:0012609	Alzheimer disease 12	OMIM:611073	AD12
+MONDO:0010231	MRX20	OMIM:300047	MRX20
+MONDO:0014161	VUR7	OMIM:615390	VUR7
+MONDO:0011591	cataract 26 multiple types	OMIM:605749	CTPL1
+MONDO:0014774	neuroblastoma, susceptibility to, 7	OMIM:616792	NBLST7
+MONDO:0012898	narcolepsy 4, susceptibility to	OMIM:612417	NRCLP4
+MONDO:0012715	MGR12	OMIM:611706	MGR12
+MONDO:0013470	generalized epilepsy with febrile seizures plus, type 7	OMIM:613863	GEFSP7
+MONDO:0010403	albinism-deafness syndrome	OMIM:300700	ADFN
+MONDO:0011616	holoprosencephaly 6	OMIM:605934	HPE6
+MONDO:0014291	autosomal dominant nonsyndromic deafness 54	OMIM:615649	DFNA54
+MONDO:0007360	branchiootic syndrome 2	OMIM:120502	BOS2
+MONDO:0012270	Tukel syndrome	OMIM:609428	TUKLS
+MONDO:0014009	autosomal recessive congenital ichthyosis 7	OMIM:615022	ARCI7
+MONDO:0012167	ATFB2	OMIM:608988	ATFB2
+MONDO:0011691	amyotrophic lateral sclerosis type 3	OMIM:606640	ALS3
+MONDO:0013368	mammary-digital-nail syndrome	OMIM:613689	MDNS
+MONDO:0010458	hypospadias 4, X-linked	OMIM:300856	HYSP4
+MONDO:0010332	X-linked intellectual disability-cubitus valgus-dysmorphism syndrome	OMIM:300471	CVMRF
+MONDO:0011055	distal monosomy 10p	OMIM:601362	DGS2
+MONDO:0007802	hypospadias 3, autosomal	OMIM:146450	HYSP3
+MONDO:0013102	BCC3	OMIM:613059	BCC3
+MONDO:0014308	familial temporal lobe epilepsy 6	OMIM:615697	ETL6
+MONDO:0011389	autosomal dominant nonsyndromic deafness 16	OMIM:603964	DFNA16
+MONDO:0007963	melanoma, cutaneous malignant, susceptibility to, 1	OMIM:155600	CMM
+MONDO:0011201	ETM2	OMIM:602134	ETM2
+MONDO:0007939	malignant hyperthermia, susceptibility to, 2	OMIM:154275	MHS2
+MONDO:0007082	alopecia areata 1	OMIM:104000	AA1
+MONDO:0011563	GINGF2	OMIM:605544	GINGF2
+MONDO:0009887	desquamative interstitial pneumonia	OMIM:263000	DIP
+MONDO:0010269	Coats disease	OMIM:300216	CTD
+MONDO:0014001	Usher syndrome type 1K	OMIM:614990	USH1K
+MONDO:0011711	specific language impairment 2	OMIM:606712	SLI2
+MONDO:0013705	MRT19	OMIM:614343	MRT19
+MONDO:0012636	restless legs syndrome, susceptibility to, 6	OMIM:611185	RLS6
+MONDO:0012755	episodic ataxia type 7	OMIM:611907	EA7
+MONDO:0010329	MRX77	OMIM:300454	MRX77
+MONDO:0011780	specific language impairment 3	OMIM:607134	SLI3
+MONDO:0011567	dilated cardiomyopathy 1K	OMIM:605582	CMD1K
+MONDO:0011942	SLEN1	OMIM:607965	SLEN1
+MONDO:0011587	cataract 25	OMIM:605728	CTRCT25
+MONDO:0012334	hereditary spastic paraplegia 29	OMIM:609727	SPG29
+MONDO:0011418	dyslexia, susceptibility to, 3	OMIM:604254	DYX3
+MONDO:0024466	facial paresis, hereditary congenital, 1	OMIM:601471	MBS2
+MONDO:0011737	PARK10	OMIM:606852	PARK10
+MONDO:0012302	PFM3	OMIM:609566	PFM3
+MONDO:0011607	narcolepsy 2, susceptibility to	OMIM:605841	NRCLP2
+MONDO:0010413	MRX95	OMIM:300716	MRX95
+MONDO:0010473	X-linked intellectual disability-cardiomegaly-congestive heart failure syndrome	OMIM:300886	MRXS32
+MONDO:0012739	microtia-eye coloboma-imperforation of the nasolacrimal duct syndrome	OMIM:611863	MNDEC
+MONDO:0013080	primary biliary cholangitis 3	OMIM:613008	PBC3
+MONDO:0012895	torsion dystonia 17	OMIM:612406	DYT17
+MONDO:0013106	BCC6	OMIM:613063	BCC6
+MONDO:0013908	TTPP3	OMIM:614834	TTPP3
+MONDO:0011522	hereditary spastic paraplegia 14	OMIM:605229	SPG14
+MONDO:0011564	cone-rod dystrophy 8	OMIM:605549	CORD8
+MONDO:0024560	PDA1	OMIM:607411	PDA1
+MONDO:0010464	X-linked cerebral-cerebellar-coloboma syndrome syndrome	OMIM:300864	CCCSX
+MONDO:0010309	MRX42	OMIM:300372	MRX42
+MONDO:0012264	PEE2	OMIM:609402	PEE2
+MONDO:0010352	MRX82	OMIM:300518	MRX82
+MONDO:0013105	BCC5	OMIM:613062	BCC5
+MONDO:0011850	migraine with or without aura, susceptibility to, 5	OMIM:607508	MGR5
+MONDO:0010230	MRX23	OMIM:300046	MRX23
+MONDO:0012532	hereditary hemorrhagic telangiectasia type 4	OMIM:610655	HHT4
+MONDO:0010893	malignant hyperthermia, susceptibility to, 4	OMIM:600467	MHS4
+MONDO:0013980	PPKP1B	OMIM:614936	PPKP1B
+MONDO:0012458	hypertension, essential, susceptibility to, 5	OMIM:610261	HYT5
+MONDO:0013124	pelvic organ prolapse, susceptibility to, 2	OMIM:613088	PVOP2
+MONDO:0011689	dyslexia, susceptibility to, 6	OMIM:606616	DYX6
+MONDO:0010300	MRX53	OMIM:300324	MRX53
+MONDO:0007282	cataract 29	OMIM:115800	CTRCT29
+MONDO:0008585	HELLP syndrome	OMIM:189800	PEE1
+MONDO:0013433	primary sclerosing cholangitis	OMIM:613806	PSC
+MONDO:0010412	X-linked intellectual disability-craniofacioskeletal syndrome	OMIM:300712	CFSS
+MONDO:0014604	Parkinson disease 21	OMIM:616361	PARK21
+MONDO:0012370	autosomal recessive nonsyndromic deafness 51	OMIM:609941	DFNB51
+MONDO:0012319	major affective disorder 3	OMIM:609633	MAFD3
+MONDO:0010324	MRX81	OMIM:300433	MRX81
+MONDO:0012358	LPRS1	OMIM:609888	LPRS
+MONDO:0012418	autosomal recessive nonsyndromic deafness 62	OMIM:610143	DFNB62
+MONDO:0011219	Fried's tooth and nail syndrome	OMIM:602401	ECTD8
+MONDO:0012752	ANIB6	OMIM:611892	ANIB6
+MONDO:0014079	restless legs syndrome, susceptibility to, 8	OMIM:615197	RLS8
+MONDO:0009072	Dandy-Walker syndrome	OMIM:220200	DWS
+MONDO:0010698	optic atrophy 2	OMIM:311050	OPA2
+MONDO:0009178	epidermolysis bullosa dystrophica Neurotrophica	OMIM:226500	EBR3
+MONDO:0010285	syndromic X-linked intellectual disability Abidi type	OMIM:300262	MRXSAB
+MONDO:0011755	SLSN3	OMIM:606995	SLSN3
+MONDO:0011747	dyslexia, susceptibility to, 5	OMIM:606896	DYX5
+MONDO:0012150	attention deficit-hyperactivity disorder, susceptibility to, 2	OMIM:608904	ADHD2
+MONDO:0008374	retinal cone dystrophy type 1	OMIM:180020	RCD1
+MONDO:0012619	MRT11	OMIM:611097	MRT11
+MONDO:0012168	dyslexia, susceptibility to, 8	OMIM:608995	DYX8
+MONDO:0011056	Wilms tumor 4	OMIM:601363	WT4
+MONDO:0011407	facial paresis, hereditary congenital, 2	OMIM:604185	MBS3
+MONDO:0012109	hypertension, essential, susceptibility to, 4	OMIM:608742	HYT4
+MONDO:0012119	ASPG3	OMIM:608781	ASPG3
+MONDO:0013622	platelet-type bleeding disorder 9	OMIM:614200	BDPLT9
+MONDO:0008661	vitiligo	OMIM:193200	VAMAS6
+MONDO:0012134	EJM3	OMIM:608816	EJM3
+MONDO:0010228	DFNX3	OMIM:300030	DFNX3
+MONDO:0013632	autosomal dominant nonsyndromic deafness 33	OMIM:614211	DFNA33
