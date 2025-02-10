@@ -84,8 +84,25 @@ To run PhenoSS, use the following command:
 ```
 python phenoSS.py inputFile outputFile
 ```
-The ranks will be stored in the output file.
+The results consist of a list of MONDO diseases and the rankings and will be stored in 'outputFile' specified by the user. 
 
+### Convert MONDO diseases to genes
+PhenoSS outputs a list of MONDO diseases and the corresponding rankings. The file 'mondo2gene.txt' maps MONDO diseases to gene symbols. Below is the first four lines of 'mondo2gene.txt':
+
+| class  | class_label | OMIM | Approved Gene Symbol (HGNC) |
+| ------------- | ------------- | ------------- | ------------- |
+| MONDO:0013138  | BRV2  | OMIM:613106  | BRV2  |
+| MONDO:0014068  | cone-rod dystrophy 17  | OMIM:615163  | CORD17  |
+| MONDO:0013151  | CACD3  | OMIM:613144  | CACD3  |
+| MONDO:0010568  | Aicardi syndrome  | OMIM:304050  | AIC  |
+
+
+To convert the results into genes, run the following command:
+
+```
+python mondo2gene.py inputFile outputFile
+```
+The file 'inputFile' should contain the output from PhenoSS, and the converted genes will be stored in 'outputFile'.
 ## Datasets
 #### Human Phenotype Ontology (HPO): 
 https://hpo.jax.org/
