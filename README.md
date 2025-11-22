@@ -108,3 +108,7 @@ The file 'inputFile' should contain the output from PhenoSS, and the converted g
 https://hpo.jax.org/
 #### Open Annotations for Rare Diseases (OARD):
 https://rare.cohd.io/
+
+## License
+
+PhenoSS is distributed under the [MIT License by Wang Genomics Lab](https://wglab.mit-license.org/).
