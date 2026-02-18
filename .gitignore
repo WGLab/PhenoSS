@@ -1,0 +1,12 @@
+.*/
+doc/paper_data
+gmdb*/
+
+phenoss*
+
+slurm*
+
+run_all_combos.sh
+run_phenoss_ranking.sh
+top10*
+Untitled*

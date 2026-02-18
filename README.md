@@ -7,9 +7,44 @@ The toolkit is implemented in Python.
 
 ## Installation
 
+### 1) Ensure to download several databases for this application:
+
+**DIshIN** (required for ssmpy)
+```
+curl -L -O http://labs.rd.ciencias.ulisboa.pt/dishin/hp202506.db.gz
+gunzip -N hp202506.db.gz
+```
+(you will find "hp.db" on the local directory)
+
+**HPO-Disease Frequency**
+- Access https://hpo.jax.org/data/annotations
+- Download "GENES TO PHENOTYPE" and save in ./doc/database/
+
+**OARD**
+- There is no need to download anything here as the database will be called out during running. (https://rare.cohd.io/)
+
+**MONDO**
+- You may need this data if you need to convert from OMIM to MONDO or Orphanet to MONDO. Howewever, we directly provide the conversion files (./doc/database/omim_conversion.json | orphanet_conversion.json) for you (note that this can be outdated).
+- Alternatively, download the mondo-edges.tsv for conversion.
+
+### 2) Code environment:
+Ensure that you install required packages:
+```
+pip install pandas numpy requests ssmpy scipy
+```
+
+### 3) You need to run 'python processing_hpo_frequency.py' to obtain ./doc/database/hpo_frequency.csv (one-time only)
+
 
 
 ## Tutorial
+
+### In this repo, we present two separate pipelines:
+a) Patient Clustering
+
+b) Diease Prediction (PhenoSS)
+
+
 ### Patient Clustering
 #### Sample HPO data
 The file hpo_list contains the synthetic data for three randomly generated patients labeled 0_10, 1_10, 2_10. 
@@ -23,54 +58,20 @@ The file hpo_list contains the synthetic data for three randomly generated patie
 #### Similairty score calculation
 
 Using the following argument, we can calculate the similarity scores between patient 1_10 and each of the patients in the hpo_list. 
-The first input argument is the file that contains the patient IDs and the HPO terms. The second input argument is the patient ID we are interested in.
+The first input argument is the input file that contains the patient IDs and the HPO terms.
 ```
-python getdiff_one_patient.py hpo_list 1_10
+python similarity_score.py -input_dir [YOUR INPUT DIRECTORY] -output_dir [YOUR OUTPUT DIRECTORY]
 ```
-
-You are recommended to submit one job for each patient to perform computing simultaneously.
 
 The outputs of the argument can be found in the file 1_10_sim.
-```
-1_10	0_10	3.741497748992082
-1_10	1_10	8.089540938721928
-1_10	2_10	2.451702686307226
-```
-The following code will summarize the scores for all the patients and form the similarity matrix.
-```
-perl get_sim_mat.pl hpo_list
-```
-We can then perform the quality check. filter.pl automatically detects missing values in the similarity matrix and selects te largest subset of the patients such that there is no missing similarity scores for these patients and forms the similarity score matrix.
-
-```
-perl filter.pl
-```
-The similarity score matrix will then be saved into the file `sim_mat_filter`.
-
-#### Hierarchical clustering
-To better understand the results, we can perform the hierarchical clustering and plot the dendrograms in R.
-```
-library(dplyr)
-x <- read.table("sim_mat_filter")
-x$V3 <- 1/x$V3
-numpat <- sqrt(dim(x)[1])
-pat_mat <- matrix(x$V3, nrow = numpat)
-patid <- x$V2[1:numpat]
-colnames(pat_mat) <- patid
-rownames(pat_mat) <- patid
-
-hc <- hclust(dist(pat_mat), method = "ward.D2")
-dend <- as.dendrogram(hc)
-
-#groupCodes <- c(rep("NA10", 63), rep("NA15", 64))
-#colorCodes <- c(NA10="blue", NA15="green")
-#labels_colors(dend) <- colorCodes[groupCodes][order.dendrogram(dend)]
-
-plot(dend)
-```
+| pat1 | pat2 | hpo1 | hpo2 | similarity |
+|------|------|------|------|-----------|
+| 0_10 | 1_10 | HP_0004370;HP_0000280;HP_0002835;... | HP_0000483;HP_0002307;HP_0001090;... | 3.74 |
+| 0_10 | 2_10 | HP_0004370;HP_0000280;HP_0002835;... | HP_0002194;HP_0001263;HP_0001684 | 8.09 |
+| 1_10 | 2_10 | HP_0000483;HP_0002307;HP_0001090;... | HP_0002194;HP_0001263;HP_0001684;... | 2.45 |
 
 ### Disease prediction
-PhenoSS extracts the diseases/phenotype frequencies from the Open Annotations for Rare Diseases (OARD) Database. It takes in HPO terms of a list of patients and outputs the ranks of possible underlying diseases. 
+PhenoSS extracts the diseases/phenotype frequencies from the Open Annotations for Rare Diseases (OARD) and Human Phenotype Ontology Databases. It takes in HPO terms of a list of patients and outputs the ranks of possible underlying diseases. 
 
 Below is a sample input file:
 
@@ -79,35 +80,48 @@ P1	HP_0012759;HP_0000750;HP_0100022;HP_0000707;
 P2	HP_0001270;HP_0012758;HP_0002066;HP_0011443;
 P3	HP_0012758;HP_0002167;HP_0012638;HP_0000707;
 ```
-To run PhenoSS, use the following command:
+You can use "PhenoSS_Codebook.ipynb" if you prefer the interactive browser. Otherwise to run PhenoSS, use the following command:
 
 ```
-python phenoSS.py inputFile outputFile
+bash run_phenoss.sh \
+  --inputfile data/patient_hpos.tsv \
+  --outputfile results/phenoss_output.tsv \
+  --mode oard_first \
+  --freq_assignment extrinsic_ic \
+  --method Resnik \
+  --hp_db_sqlite hp.db \
+  --hpo_db_path ./doc/database/hpo_frequency.csv \
+  --url https://rare.cohd.io/api \
+  --dataset_id 2 \
+  --gene_conversion \
+  --gene_of_interest GATA2 \
+  --gene_outfile results/gene_results.tsv
 ```
+| Argument             | Required  | Default                    | Description                                                                                   |
+| -------------------- | --------- | -------------------------- | --------------------------------------------------------------------------------------------- |
+| `--inputfile`        | **Yes**   | —                          | Input file containing patient HPO phenotypes                                                  |
+| `--outputfile`       | **Yes**   | —                          | Output ranking file                                                                           |
+| `--mode`             | No        | `oard_first`               | Candidate disease selection strategy (`oard_only`, `oard_first`, `hpodb_first`, `hpodb_only`) |
+| `--freq_assignment`  | No        | `extrinsic_ic`             | Frequency assignment method for HPO terms                                                     |
+| `--method`           | No        | `Resnik`                   | Semantic similarity method                                                                    |
+| `--hp_db_sqlite`     | No        | `hp.db`                    | SQLite database for HPO ontology                                                              |
+| `--hpo_db_path`      | No        | `hpo_frequency.csv`        | HPO frequency table                                                                           |
+| `--gene_conversion`  | No (flag) | Off                        | Convert diseases to genes in output. Note that diseases with unknown genes will be removed.                                                           |
+| `--url`              | No        | `https://rare.cohd.io/api` | COHD API endpoint                                                                             |
+| `--dataset_id`       | No        | `2`                        | Dataset ID for COHD                                                                           |
+| `--gene_of_interest` | No        | empty                      | Specific gene to evaluate                                                                     |
+| `--gene_outfile`     | No        | empty                      | Output file for gene results                                                                  |
+
+
 The results consist of a list of MONDO diseases and the rankings and will be stored in 'outputFile' specified by the user. 
 
-### Convert MONDO diseases to genes
-PhenoSS outputs a list of MONDO diseases and the corresponding rankings. The file 'mondo2gene.txt' maps MONDO diseases to gene symbols. Below is the first four lines of 'mondo2gene.txt':
+### Output Example
+| patient_id  | disease_mondo | gene  | disease_id | score              | rank | 
+| ----------- | ------------- | ----- | ---------- | ------------------ | ---- |
+| PATIENT_001 | MONDO:0001234 | GENE1 | 80001234   | -0.941566671739919 | 1    | 
+| PATIENT_001 | MONDO:0001234 | GENE2 | 80001234   | -0.941566671739919 | 1    | 
+| PATIENT_001 | MONDO:0005678 | NA | 80005678   | -0.941503249828281 | 3    | 
 
-| class  | class_label | OMIM | Approved Gene Symbol (HGNC) |
-| ------------- | ------------- | ------------- | ------------- |
-| MONDO:0013138  | BRV2  | OMIM:613106  | BRV2  |
-| MONDO:0014068  | cone-rod dystrophy 17  | OMIM:615163  | CORD17  |
-| MONDO:0013151  | CACD3  | OMIM:613144  | CACD3  |
-| MONDO:0010568  | Aicardi syndrome  | OMIM:304050  | AIC  |
-
-
-To convert the results into genes, run the following command:
-
-```
-python mondo2gene.py inputFile outputFile
-```
-The file 'inputFile' should contain the output from PhenoSS, and the converted genes will be stored in 'outputFile'.
-## Datasets
-#### Human Phenotype Ontology (HPO): 
-https://hpo.jax.org/
-#### Open Annotations for Rare Diseases (OARD):
-https://rare.cohd.io/
 
 ## License
 
