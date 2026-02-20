@@ -24,7 +24,7 @@ gunzip -N hp202506.db.gz
 - There is no need to download anything here as the database will be called out during running. (https://rare.cohd.io/)
 
 **MONDO**
-- You may need this data if you need to convert from OMIM to MONDO or Orphanet to MONDO. Howewever, we directly provide the conversion files (./doc/database/omim_conversion.json | orphanet_conversion.json) for you (note that this can be outdated).
+- You may need this data if you need to convert from OMIM to MONDO or Orphanet to MONDO. Howewever, we directly provide the conversion files (./databases/omim_conversion.json | orphanet_conversion.json) for you (note that this can be outdated).
 - Alternatively, download the mondo-edges.tsv for conversion.
 
 ### 2) Code environment:
@@ -33,7 +33,7 @@ Ensure that you install required packages:
 pip install pandas numpy requests ssmpy scipy
 ```
 
-### 3) You need to run 'python ./scripts/processing_hpo_frequency.py' to obtain ./doc/database/hpo_frequency.csv (one-time only)
+### 3) You need to run 'python ./scripts/processing_hpo_frequency.py' to obtain ./databases/hpo_frequency.csv (one-time only)
 
 
 
@@ -74,7 +74,7 @@ P1	HP_0012759;HP_0000750;HP_0100022;HP_0000707;
 P2	HP_0001270;HP_0012758;HP_0002066;HP_0011443;
 P3	HP_0012758;HP_0002167;HP_0012638;HP_0000707;
 ```
-You can use "PhenoSS_Codebook.ipynb" if you prefer the interactive browser. Otherwise to run PhenoSS, use the following command:
+**You can use "PhenoSS_Codebook.ipynb" if you prefer the interactive browser**. Otherwise to run PhenoSS, use the following command:
 
 ```
 bash run_phenoss.sh \
