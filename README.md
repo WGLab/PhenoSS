@@ -1,11 +1,11 @@
 # PhenoSS: Phenotype semantic similarity-based approach for rare disease prediction and patient clustering 
 
-## Introduction
+# Introduction
 PhenoSS is an effective algorithm that makes disease prediction and performs patient clustering based on HPO concepts. PhenoSS uses the Gaussian copula technique by modeling the marginal prevalence of each HPO term for each disease and utilizes a multivariate normal distribution to link them together to account for term correlations. We utilized the OARD (open annotations for rare diseases) API for inferring the frequency of HPO terms in a diverse range of rare diseases. PhenoSS can calculate the phenotype similarity between any two patients for finding similar patients or clustering purposes, or between one patient and any candidate diseases for diagnosis support. 
 
 The toolkit is implemented in Python. 
 
-## Installation
+# Installation
 
 ### 1) Ensure to download several databases for this application:
 
@@ -33,19 +33,13 @@ Ensure that you install required packages:
 pip install pandas numpy requests ssmpy scipy
 ```
 
-### 3) You need to run 'python processing_hpo_frequency.py' to obtain ./doc/database/hpo_frequency.csv (one-time only)
+### 3) You need to run 'python ./scripts/processing_hpo_frequency.py' to obtain ./doc/database/hpo_frequency.csv (one-time only)
 
 
 
-## Tutorial
+# Tutorials
 
-### In this repo, we present two separate pipelines:
-a) Patient Clustering
-
-b) Diease Prediction (PhenoSS)
-
-
-### Patient Clustering
+## Patient Clustering
 #### Sample HPO data
 The file hpo_list contains the synthetic data for three randomly generated patients labeled 0_10, 1_10, 2_10. 
 ```
@@ -60,7 +54,7 @@ The file hpo_list contains the synthetic data for three randomly generated patie
 Using the following argument, we can calculate the similarity scores between patient 1_10 and each of the patients in the hpo_list. 
 The first input argument is the input file that contains the patient IDs and the HPO terms.
 ```
-python similarity_score.py -input_dir [YOUR INPUT DIRECTORY] -output_dir [YOUR OUTPUT DIRECTORY]
+python ./scripts/similarity_score.py -input_dir [YOUR INPUT DIRECTORY] -output_dir [YOUR OUTPUT DIRECTORY]
 ```
 
 The outputs of the argument can be found in the file 1_10_sim.
@@ -70,7 +64,7 @@ The outputs of the argument can be found in the file 1_10_sim.
 | 0_10 | 2_10 | HP_0004370;HP_0000280;HP_0002835;... | HP_0002194;HP_0001263;HP_0001684 | 8.09 |
 | 1_10 | 2_10 | HP_0000483;HP_0002307;HP_0001090;... | HP_0002194;HP_0001263;HP_0001684;... | 2.45 |
 
-### Disease prediction
+## Disease prediction
 PhenoSS extracts the diseases/phenotype frequencies from the Open Annotations for Rare Diseases (OARD) and Human Phenotype Ontology Databases. It takes in HPO terms of a list of patients and outputs the ranks of possible underlying diseases. 
 
 Below is a sample input file:
@@ -86,11 +80,11 @@ You can use "PhenoSS_Codebook.ipynb" if you prefer the interactive browser. Othe
 bash run_phenoss.sh \
   --inputfile data/patient_hpos.tsv \
   --outputfile results/phenoss_output.tsv \
-  --mode oard_first \
+  --mode hpo_first \
   --freq_assignment extrinsic_ic \
   --method Resnik \
   --hp_db_sqlite hp.db \
-  --hpo_db_path ./doc/database/hpo_frequency.csv \
+  --hpo_db_path ./databases/hpo_frequency.csv \
   --url https://rare.cohd.io/api \
   --dataset_id 2 \
   --gene_conversion \
@@ -101,12 +95,14 @@ bash run_phenoss.sh \
 | -------------------- | --------- | -------------------------- | --------------------------------------------------------------------------------------------- |
 | `--inputfile`        | **Yes**   | —                          | Input file containing patient HPO phenotypes                                                  |
 | `--outputfile`       | **Yes**   | —                          | Output ranking file                                                                           |
-| `--mode`             | No        | `oard_first`               | Candidate disease selection strategy (`oard_only`, `oard_first`, `hpodb_first`, `hpodb_only`) |
-| `--freq_assignment`  | No        | `extrinsic_ic`             | Frequency assignment method for HPO terms                                                     |
+| `--mode`             | No        | `hpo_first`               | Candidate disease selection strategy (`oard_only`, `oard_first`, `hpodb_first`, `hpodb_only`) |
+| `--freq_assignment`  | No        | `assumption`             | Frequency assignment method for HPO terms                                                     |
 | `--method`           | No        | `Resnik`                   | Semantic similarity method                                                                    |
 | `--hp_db_sqlite`     | No        | `hp.db`                    | SQLite database for HPO ontology                                                              |
-| `--hpo_db_path`      | No        | `hpo_frequency.csv`        | HPO frequency table                                                                           |
+| `--hpo_db_path`      | No        | `./databases/hpo_frequency.csv`        | HPO frequency table                                                                           |
 | `--gene_conversion`  | No (flag) | Off                        | Convert diseases to genes in output. Note that diseases with unknown genes will be removed.                                                           |
+| `--hpo_removal`  | No (flag) | Off                        | Remove less informative HPO terms such as HP:0000118 to increase the precision.                                                           |                                                     |
+| `--limit`              | No        | `0` | Maximum number of diseases can be considered when predicting per sample (a list of HPO terms may be linked to thousands of diseases). Smaller is faster. Set default to be 0 means no limit.                                                                             |
 | `--url`              | No        | `https://rare.cohd.io/api` | COHD API endpoint                                                                             |
 | `--dataset_id`       | No        | `2`                        | Dataset ID for COHD                                                                           |
 | `--gene_of_interest` | No        | empty                      | Specific gene to evaluate                                                                     |

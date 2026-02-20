@@ -7,20 +7,22 @@
 INPUTFILE=""
 OUTPUTFILE=""
 
-MODE="oard_first"        # oard_only | oard_first | hpodb_first | hpodb_only
+MODE="hpodb_first"        # oard_only | oard_first | hpodb_first | hpodb_only
 FREQ_ASSIGNMENT="extrinsic_ic"
 
 METHOD="Resnik"
 HP_DB_SQLITE="hp.db"
-HPO_DB_PATH="./doc/database/hpo_frequency.csv"
+HPO_DB_PATH="./databases/hpo_frequency.csv"
 GENE_CONVERSION=""
+HPO_REMOVAL=""
+LIMIT="0"
 URL="https://rare.cohd.io/api"
 DATASET_ID="2"
 
 GENE_OF_INTEREST=""
 GENE_OUTFILE=""
 
-PY_SCRIPT="./doc/phenoss.py"   # python script name
+PY_SCRIPT="./scripts/phenoss_ranking.py"   # python script name
 
 
 # ======================================================
@@ -37,6 +39,8 @@ while [[ $# -gt 0 ]]; do
         --hp_db_sqlite) HP_DB_SQLITE="$2"; shift 2 ;;
         --hpo_db_path) HPO_DB_PATH="$2"; shift 2 ;;
         --gene_conversion) GENE_CONVERSION=1; shift ;;   # <-- flag only
+        --hpo_removal) HPO_REMOVAL=1; shift ;;   # <-- flag only
+        --limit) LIMIT="$2"; shift 2 ;;
         --url) URL="$2"; shift 2 ;;
         --dataset_id) DATASET_ID="$2"; shift 2 ;;
         --gene_of_interest) GENE_OF_INTEREST="$2"; shift 2 ;;
@@ -68,11 +72,16 @@ CMD="python ${PY_SCRIPT} \
     --method ${METHOD} \
     --hp_db_sqlite ${HP_DB_SQLITE} \
     --hpo_db_path ${HPO_DB_PATH} \
+    --limit ${LIMIT} \
     --url ${URL} \
     --dataset_id ${DATASET_ID}"
 
 if [[ ! -z "$GENE_CONVERSION" ]]; then
     CMD="$CMD --gene_conversion"
+fi
+
+if [[ ! -z "$HPO_REMOVAL" ]]; then
+    CMD="$CMD --hpo_removal"
 fi
 
 if [[ ! -z "$GENE_OF_INTEREST" ]]; then

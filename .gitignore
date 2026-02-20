@@ -1,6 +1,7 @@
 .*/
 doc/paper_data
 gmdb*/
+scripts/phenoss_ranking.py
 
 phenoss*
 
