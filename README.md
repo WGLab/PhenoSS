@@ -11,6 +11,7 @@ The toolkit is implemented in Python.
 
 **DIshIN** (required for ssmpy)
 ```
+cd databases
 curl -L -O http://labs.rd.ciencias.ulisboa.pt/dishin/hp202506.db.gz
 gunzip -N hp202506.db.gz
 ```
@@ -18,7 +19,7 @@ gunzip -N hp202506.db.gz
 
 **HPO-Disease Frequency**
 - Access https://hpo.jax.org/data/annotations
-- Download "GENES TO PHENOTYPE" and save in ./doc/database/
+- Download "GENES TO PHENOTYPE" and save in ./databases/
 
 **OARD**
 - There is no need to download anything here as the database will be called out during running. (https://rare.cohd.io/)
@@ -33,7 +34,7 @@ Ensure that you install required packages:
 pip install pandas numpy requests ssmpy scipy
 ```
 
-### 3) You need to run 'python ./scripts/processing_hpo_frequency.py' to obtain ./databases/hpo_frequency.csv (one-time only)
+### 3) You need to run 'python ./src/processing_hpo_frequency.py' to obtain ./databases/hpo_frequency.csv (one-time only)
 
 
 
@@ -54,7 +55,7 @@ The file hpo_list contains the synthetic data for three randomly generated patie
 Using the following argument, we can calculate the similarity scores between patient 1_10 and each of the patients in the hpo_list. 
 The first input argument is the input file that contains the patient IDs and the HPO terms.
 ```
-python ./scripts/similarity_score.py -input_dir [YOUR INPUT DIRECTORY] -output_dir [YOUR OUTPUT DIRECTORY]
+python ./src/similarity_score.py -input_dir [YOUR INPUT DIRECTORY] -output_dir [YOUR OUTPUT DIRECTORY]
 ```
 
 The outputs of the argument can be found in the file 1_10_sim.
@@ -81,9 +82,9 @@ bash run_phenoss.sh \
   --inputfile data/patient_hpos.tsv \
   --outputfile results/phenoss_output.tsv \
   --mode hpo_first \
-  --freq_assignment extrinsic_ic \
+  --freq_assignment ic \
   --method Resnik \
-  --hp_db_sqlite hp.db \
+  --hp_db_sqlite ./databases/hp.db \
   --hpo_db_path ./databases/hpo_frequency.csv \
   --url https://rare.cohd.io/api \
   --dataset_id 2 \
@@ -98,7 +99,7 @@ bash run_phenoss.sh \
 | `--mode`             | No        | `hpo_first`               | Candidate disease selection strategy (`oard_only`, `oard_first`, `hpodb_first`, `hpodb_only`) |
 | `--freq_assignment`  | No        | `assumption`             | Frequency assignment method for HPO terms                                                     |
 | `--method`           | No        | `Resnik`                   | Semantic similarity method                                                                    |
-| `--hp_db_sqlite`     | No        | `hp.db`                    | SQLite database for HPO ontology                                                              |
+| `--hp_db_sqlite`     | No        | `./databases/hp.db`                    | SQLite database for HPO ontology                                                              |
 | `--hpo_db_path`      | No        | `./databases/hpo_frequency.csv`        | HPO frequency table                                                                           |
 | `--gene_conversion`  | No (flag) | Off                        | Convert diseases to genes in output. Note that diseases with unknown genes will be removed.                                                           |
 | `--hpo_removal`  | No (flag) | Off                        | Remove less informative HPO terms such as HP:0000118 to increase the precision.                                                           |                                                     |

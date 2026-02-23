@@ -8,7 +8,7 @@ INPUTFILE=""
 OUTPUTFILE=""
 
 MODE="hpodb_first"        # oard_only | oard_first | hpodb_first | hpodb_only
-FREQ_ASSIGNMENT="extrinsic_ic"
+FREQ_ASSIGNMENT="ic"
 
 METHOD="Resnik"
 HP_DB_SQLITE="hp.db"
@@ -22,7 +22,7 @@ DATASET_ID="2"
 GENE_OF_INTEREST=""
 GENE_OUTFILE=""
 
-PY_SCRIPT="./scripts/phenoss_ranking.py"   # python script name
+PY_SCRIPT="./src/phenoss.py"   # python script name
 
 
 # ======================================================

@@ -1,7 +1,7 @@
 !install.packages("dendextend")   # run once if not installed
 library(dendextend)
 library(dplyr)
-x <- read.table("/home/nguyenqm/projects/github/PhenoSS/doc/paper_data/sim_mat_deidentified_filter")
+x <- read.table("./sim_mat_filter")
 x$V3 <- 1/x$V3
 numpat <- sqrt(dim(x)[1])
 pat_mat <- matrix(x$V3, nrow = numpat)
@@ -35,7 +35,7 @@ lab <- labels(dend)
 
 labels_colors(dend) <- colorCodes[groupCodes[lab]]
 
-png("/home/nguyenqm/projects/github/PhenoSS/doc/paper_data/dendrogram_clarity.png", width = 2400, height = 1600, res = 150)
+png("./dendrogram_plot.png", width = 2400, height = 1600, res = 150)
 
 plot(
   dend,

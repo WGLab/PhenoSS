@@ -7,7 +7,7 @@ library(dplyr)
 # -----------------------------
 # 1. Read similarity table
 # -----------------------------
-file_path <- "/home/nguyenqm/projects/github/PhenoSS/doc/paper_data/sim_mat_arcus"
+file_path <- "./sim_mat_filter"
 x <- read.table(file_path, header = FALSE, stringsAsFactors = FALSE)
 
 colnames(x) <- c("id1","id2","sim")
@@ -84,7 +84,7 @@ acc_text <- paste0("1-NN accuracy: ", round(acc, 2))
 xlim_use <- quantile(mds[,1], c(0.02, 0.98))
 ylim_use <- quantile(mds[,2], c(0.02, 0.98))
 
-png("/home/nguyenqm/projects/github/PhenoSS/doc/paper_data/arcus_mds_plot.png",
+png("./mds_plot.png",
     width = 1800, height = 1400, res = 200)
 
 plot(

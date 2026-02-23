@@ -1,5 +1,5 @@
 .*/
-doc/paper_data
+doc
 gmdb*/
 scripts/phenoss_ranking.py
 scripts/phenoss_score.py
