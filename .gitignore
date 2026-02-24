@@ -1,8 +1,8 @@
 .*/
 doc
 gmdb*/
-scripts/phenoss_ranking.py
-scripts/phenoss_score.py
+src/phenoss_ranking.py
+src/phenoss_score.py
 
 slurm*
 
