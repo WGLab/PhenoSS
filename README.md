@@ -123,3 +123,6 @@ The results consist of a list of MONDO diseases and the rankings and will be sto
 ## License
 
 PhenoSS is distributed under the [MIT License by Wang Genomics Lab](https://wglab.mit-license.org/).
+
+## Reference
+Shihan Chen, Quan M. Nguyen, Yu Hu, Cong Liu, Chunhua Weng, Kai Wang. PhenoSS: Phenotype semantic similarity-based approach for rare disease prediction and patient clustering. medRxiv 2026.02.26.26347219; doi: https://doi.org/10.64898/2026.02.26.26347219
