@@ -5,12 +5,22 @@ import pandas as pd
 import ssmpy, sys, json, argparse, os
 from tqdm import tqdm
 from copy import deepcopy
+from pathlib import Path
+
+# Get the directory of THIS script
+BASE_DIR = Path(__file__).resolve().parent
+
+# Go up one level (PhenoSS/) and into databases/
+DB_PATH = BASE_DIR.parent / "databases" / "hp.db"
+
+# Convert to string if needed
+DB_PATH = str(DB_PATH)
 # ----------------------------
 # PhenoSS configuration
 # ----------------------------
 ssmpy.ssm.mica = True
 ssmpy.ssm.intrinsic = True
-ssmpy.semantic_base("hp.db")
+ssmpy.semantic_base(DB_PATH)
 
 # ----------------------------
 # Utility functions (UNCHANGED)
@@ -124,7 +134,7 @@ def main():
     for i, pat1 in enumerate(tqdm(patients, desc="pat1")):
         hpo1 = pat2hpo[pat1]
 
-        for pat2 in patients[i+1:]:
+        for pat2 in patients[i:]:
             hpo2 = pat2hpo[pat2]
 
             sim = phenoss_similarity(hpo1, hpo2)

@@ -7,23 +7,21 @@
 INPUTFILE=""
 OUTPUTFILE=""
 
-MODE="hpodb_only"        # oard_only | oard_first | hpodb_first | hpodb_only
-FREQ_ASSIGNMENT="ic"
+MODE="oard_first"        # oard_only | oard_first | hpodb_first | hpodb_only
+FREQ_ASSIGNMENT="extrinsic_ic"
 
 METHOD="Resnik"
-HP_DB_SQLITE="./databases/hp.db"
-HPO_DB_PATH="./databases/hpo_frequency.csv"
-GENE_CONVERSION='False'
-HPO_REMOVAL=""
-LIMIT=0
+HP_DB_SQLITE="hp.db"
+HPO_DB_PATH="./doc/database/hpo_frequency.csv"
+GENE_CONVERSION=""
 URL="https://rare.cohd.io/api"
 DATASET_ID="2"
 
 GENE_OF_INTEREST=""
 GENE_OUTFILE=""
 
-PY_SCRIPT="./src/phenoss_local.py"   # python script name
-INDEX=0
+PY_SCRIPT="./doc/phenoss.py"   # python script name
+
 
 # ======================================================
 # ARGUMENT PARSER
@@ -39,13 +37,10 @@ while [[ $# -gt 0 ]]; do
         --hp_db_sqlite) HP_DB_SQLITE="$2"; shift 2 ;;
         --hpo_db_path) HPO_DB_PATH="$2"; shift 2 ;;
         --gene_conversion) GENE_CONVERSION=1; shift ;;   # <-- flag only
-        --hpo_removal) HPO_REMOVAL=1; shift ;;   # <-- flag only
-        --limit) LIMIT="$2"; shift 2 ;;
         --url) URL="$2"; shift 2 ;;
         --dataset_id) DATASET_ID="$2"; shift 2 ;;
         --gene_of_interest) GENE_OF_INTEREST="$2"; shift 2 ;;
         --gene_outfile) GENE_OUTFILE="$2"; shift 2 ;;
-        --index) INDEX="$2"; shift 2 ;;
         *) echo "Unknown argument $1"; exit 1 ;;
     esac
 done
@@ -73,16 +68,11 @@ CMD="python ${PY_SCRIPT} \
     --method ${METHOD} \
     --hp_db_sqlite ${HP_DB_SQLITE} \
     --hpo_db_path ${HPO_DB_PATH} \
-    --limit ${LIMIT} \
     --url ${URL} \
     --dataset_id ${DATASET_ID}"
 
 if [[ ! -z "$GENE_CONVERSION" ]]; then
     CMD="$CMD --gene_conversion"
-fi
-
-if [[ ! -z "$HPO_REMOVAL" ]]; then
-    CMD="$CMD --hpo_removal"
 fi
 
 if [[ ! -z "$GENE_OF_INTEREST" ]]; then
@@ -93,14 +83,8 @@ if [[ ! -z "$GENE_OUTFILE" ]]; then
     CMD="$CMD --gene_outfile ${GENE_OUTFILE}"
 fi
 
-if [[ ! -z "$INDEX" ]]; then
-    CMD="$CMD --index ${INDEX}"
-fi
-
 echo "Running:"
 echo $CMD
 echo ""
 
 eval $CMD
-
-# sbatch --cpus-per-task=1 --mem-per-cpu=5G --time=3-00:00:00 --wrap="bash run_phenoss.sh --inputfile ... --outputfile ....tsv"

@@ -89,7 +89,11 @@ def load_hpo_db(hpo_db_path: str):
             hpo_db["concept_frequency"],
         )
     )
-    hpo_db_index = hpo_db.groupby("concept_code_1")["concept_id_2"].apply(list).to_dict()
+    hpo_db_index = (
+            hpo_db.groupby("concept_code_1")["concept_id_2"]
+            .apply(lambda x: list(set(x)))
+            .to_dict()
+        )
 
     return {
         "hpo_db": hpo_db,
@@ -685,75 +689,78 @@ def get_mvn_for_dimension(n, cov_mat):
 def computing_phenoss(hpo_patients, freq_patients, disease2freq, hpo2diseases, args, caches):
     rank_patients = {}
     for pid, patient_hpos in tqdm(hpo_patients.items(), position=0, desc = 'Computing the score'):
-        patient_freq = freq_patients[pid]
+        try:
+            patient_freq = freq_patients[pid]
 
-        x_base = np.array([norm.ppf(p) for p in patient_freq])
-        n = len(patient_hpos)
+            x_base = np.array([norm.ppf(p) for p in patient_freq])
+            n = len(patient_hpos)
 
-        cov_mat = 0.01 * np.ones([n, n])
-        np.fill_diagonal(cov_mat, 1)
+            cov_mat = 0.01 * np.ones([n, n])
+            np.fill_diagonal(cov_mat, 1)
 
-        mvn = get_mvn_for_dimension(n, cov_mat)
-        # ---------- IC-weighted candidate filtering ----------
-        if args.mode == 'oard_only' or args.limit == 0:
-            candidate_diseases = set()
-            for h in patient_hpos:
-                candidate_diseases.update(hpo2diseases.get(h, []))
-        else:
-            if len(patient_hpos) <= 1:
+            mvn = get_mvn_for_dimension(n, cov_mat)
+            # ---------- IC-weighted candidate filtering ----------
+            if args.mode == 'oard_only' or args.limit == 0:
                 candidate_diseases = set()
                 for h in patient_hpos:
                     candidate_diseases.update(hpo2diseases.get(h, []))
             else:
+                if len(patient_hpos) <= 1:
+                    candidate_diseases = set()
+                    for h in patient_hpos:
+                        candidate_diseases.update(hpo2diseases.get(h, []))
+                else:
 
-                disease_score = defaultdict(float)
-                disease_count = defaultdict(int)
+                    disease_score = defaultdict(float)
+                    disease_count = defaultdict(int)
 
-                for h in patient_hpos:
-                    h_code = h.replace("_", ":")
-                    w = get_hpo_ic_weight(h_code, caches)
+                    for h in patient_hpos:
+                        h_code = h.replace("_", ":")
+                        w = get_hpo_ic_weight(h_code, caches)
 
-                    for d in hpo2diseases.get(h, []):
-                        disease_score[d] += w
-                        disease_count[d] += 1
+                        for d in hpo2diseases.get(h, []):
+                            disease_score[d] += w
+                            disease_count[d] += 1
 
-                # sort by IC-weighted score
-                sorted_items = sorted(
-                    disease_score.items(),
-                    key=lambda x: (x[1], disease_count[x[0]]),
-                    reverse=True
+                    # sort by IC-weighted score
+                    sorted_items = sorted(
+                        disease_score.items(),
+                        key=lambda x: (x[1], disease_count[x[0]]),
+                        reverse=True
+                    )
+
+                    TARGET = args.limit
+                    HARD_CAP = min(args.limit*2, 5000)
+
+                    if len(sorted_items) <= TARGET:
+                        candidate_diseases = [d for d, _ in sorted_items]
+                    else:
+                        cutoff_score = sorted_items[TARGET-1][1]
+
+                        candidate_diseases = [
+                            d for d, s in sorted_items
+                            if s >= cutoff_score
+                        ]
+
+                        if len(candidate_diseases) > HARD_CAP:
+                            candidate_diseases = [d for d, _ in sorted_items[:HARD_CAP]]
+            scores = {}
+            for dis in candidate_diseases:
+                scores[dis] = calc_odd_oard_fast(
+                    dis,
+                    patient_hpos,
+                    patient_freq,
+                    0.01,
+                    disease2freq,
+                    x_base,
+                    cov_mat,
+                    mvn=mvn
                 )
 
-                TARGET = args.limit
-                HARD_CAP = min(args.limit*2, 5000)
-
-                if len(sorted_items) <= TARGET:
-                    candidate_diseases = [d for d, _ in sorted_items]
-                else:
-                    cutoff_score = sorted_items[TARGET-1][1]
-
-                    candidate_diseases = [
-                        d for d, s in sorted_items
-                        if s >= cutoff_score
-                    ]
-
-                    if len(candidate_diseases) > HARD_CAP:
-                        candidate_diseases = [d for d, _ in sorted_items[:HARD_CAP]]
-        scores = {}
-        for dis in candidate_diseases:
-            scores[dis] = calc_odd_oard_fast(
-                dis,
-                patient_hpos,
-                patient_freq,
-                0.01,
-                disease2freq,
-                x_base,
-                cov_mat,
-                mvn=mvn
-            )
-
-        rank_patients[pid] = scores
-        print("finished patient:", pid)
+            rank_patients[pid] = scores
+            print("finished patient:", pid)
+        except Exception as e:
+            print("Error at patient:", pid)
 
     return rank_patients
 
