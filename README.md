@@ -65,6 +65,9 @@ The outputs of the argument can be found in the file 1_10_sim.
 | 0_10 | 2_10 | HP_0004370;HP_0000280;HP_0002835;... | HP_0002194;HP_0001263;HP_0001684 | 8.09 |
 | 1_10 | 2_10 | HP_0000483;HP_0002307;HP_0001090;... | HP_0002194;HP_0001263;HP_0001684;... | 2.45 |
 
+#### Visualization
+You should use .src/clustering.R for visualizing the predicted clusters across all labels. Please modify the script accordingly. We have three options MDS | t-SNE | UMAP. You should use PhenoSS-only (alpha = 0) option to achieve the best clustering.8 You can compare with the existing Resnik with alpha = 1.
+
 ## Disease prediction
 PhenoSS extracts the diseases/phenotype frequencies from the Open Annotations for Rare Diseases (OARD) and Human Phenotype Ontology Databases. It takes in HPO terms of a list of patients and outputs the ranks of possible underlying diseases. 
 
@@ -125,4 +128,4 @@ The results consist of a list of MONDO diseases and the rankings and will be sto
 PhenoSS is distributed under the [MIT License by Wang Genomics Lab](https://wglab.mit-license.org/).
 
 ## Reference
-Shihan Chen, Quan M. Nguyen, Yu Hu, Cong Liu, Chunhua Weng, Kai Wang. PhenoSS: Phenotype semantic similarity-based approach for rare disease prediction and patient clustering. medRxiv 2026.02.26.26347219; doi: https://doi.org/10.64898/2026.02.26.26347219
+Shihan Chen*, Quan M. Nguyen*, Yu Hu, Cong Liu, Chunhua Weng, Kai Wang. PhenoSS: Phenotype semantic similarity-based approach for rare disease prediction and patient clustering. medRxiv 2026.02.26.26347219; doi: https://doi.org/10.64898/2026.02.26.26347219

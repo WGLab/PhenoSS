@@ -1,7 +1,7 @@
 ## ============================================================
 ##  PhenoSS - visualization pipeline
 ##  Embeddings : MDS | t-SNE | UMAP
-##  Distances  : Resnik-only | PhenoSS-only (alpha = 0)
+##  Distances  : Resnik-only (alpha = 1) | PhenoSS-only (alpha = 0) | hybrid (0 < alpha < 1)
 ##  Overlay    : KMeans
 ##
 ##  PhenoSS DISTANCE:
