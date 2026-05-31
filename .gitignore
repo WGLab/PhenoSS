@@ -10,4 +10,6 @@ output
 run_all_combos.sh
 src/similarity_score_local.py
 src/phenoss_local.py
+run_phenoss_local.sh
 doc
+slurm*

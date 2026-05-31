@@ -821,7 +821,7 @@ def parse_args():
     p.add_argument(
         "--mode",
         required=True,
-        default='hpodb_first',
+        default='hpodb_only',
         choices=["oard_only", "oard_first", "hpodb_first", "hpodb_only"],
         help=(
             "Evaluation mode: "
